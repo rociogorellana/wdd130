@@ -31,10 +31,12 @@ Fonts are separated by a & */
 /*  Look around below...but DON'T CHANGE ANYTHING! */
 
 body {
+  background-color: #fcfbfb;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   max-width: 960px;
-  margin: 0 auto;
-  padding: 4em;
-  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
   text-align: center;
 }
 img {
@@ -48,6 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h2 {
   text-align: center;
+  margin: 0;
 }
 hr {
   height: 3px;
@@ -110,8 +113,10 @@ nav  {
 nav a {
   padding:1em;
   min-width: 120px;
+  color: #fcfbfb;
+  text-align: center;
   text-decoration: none;
-  padding: 10px;
+  padding: 35px;
 }
 nav a:link, nav a:visited {
   color: var(--nav-link-color);
