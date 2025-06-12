@@ -126,6 +126,92 @@
     <img src="https://byui-wdd.github.io/wdd130/rafting_images/wireframe_home.png" alt="home page wireframe" />
 
     <h3>[Page 2]</h3>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .faq {
+      margin: 20px 0;
+    }
+    .faq h2 {
+      font-size: 18px;
+      color: #0066cc;
+      cursor: pointer;
+    }
+    .faq p {
+      margin-top: 5px;
+      display: none;
+    }
+    .faq.open p {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq">
+      <h2 onclick="toggleFAQ(this)">Is this a good trip for kids? What are the age ranges you allow?</h2>
+      <p>Absolutely this is a good trip for children of all ages. We have found however that children over the age of 8 seem to enjoy it more overall. A common concern we get from parents is that their children will be bored stuck on a boat. Surprisingly, we deal with very few bored children. The scenery, wildlife, and rapids keep things exciting. Plus, each boat has a guide who loves to tell stories!</p>
+    </div>
+
+    <div class="faq">
+      <h2 onclick="toggleFAQ(this)">Is whitewater rafting safe? I don't even know how to swim! Can I still come?</h2>
+      <p>There is inherent risk with all adventure sports, but we mitigate this with professional guides who are certified in Wilderness First Aid. All guests wear Coast Guard approved life vests. Many non-swimmers join and have a great time. A safety talk is given before every trip.</p>
+    </div>
+
+    <div class="faq">
+      <h2 onclick="toggleFAQ(this)">What is included in the trip?</h2>
+      <p>We provide all camping equipment (sleeping bag, pad, tent, cot, duffle bags, utensils, camping chair), drinks (water, lemonade, coffee, tea), and meals/snacks. Alcohol and soda can be brought in reasonable amounts (2 cans per day).</p>
+    </div>
+
+    <div class="faq">
+      <h2 onclick="toggleFAQ(this)">What do I need to bring?</h2>
+      <p>Be prepared for both hot and cold conditions. Bring rain gear (not ponchos), quick-dry clothing, sun protection (hat, sunglasses), sandals/hiking shoes, personal hygiene items, flashlight, water bottle, and optional comfort items like books or cameras.</p>
+    </div>
+
+    <div class="faq">
+      <h2 onclick="toggleFAQ(this)">What is so great about whitewater rafting anyway?</h2>
+      <p>From thrilling rapids to scenic beauty and relaxing camp life, every day is a memorable adventure. Enjoy fresh meals, stunning views, hikes, and storytelling by the river under a starry sky. Don't miss the dutch oven brownies!</p>
+    </div>
+
+    <div class="faq">
+      <h2 onclick="toggleFAQ(this)">How far in advance should I book my trip?</h2>
+      <p>If you have specific dates, book a year in advance. For flexible dates, 6 months is usually enough.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleFAQ(element) {
+      const faq = element.parentElement;
+      faq.classList.toggle("open");
+    }
+  </script>
+</body>
+</html>
 
     <!-- <img src="#" alt="page 2 wireframe"> -->
 
