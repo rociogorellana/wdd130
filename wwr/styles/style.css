@@ -1,3 +1,39 @@
+form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 5px;
+  }
+  
+  form p {
+    margin-bottom: 1em;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 0.7em 1.5em;
+    background-color: #005f73;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0a9396;
+  }
 /* <length> value */
 .content {
     max-width: 1600px;  
@@ -33,4 +69,18 @@ footer p {
 footer p a:hover {
     text-decoration: underline;
 }
+#feedback {
+    background-color: antiquewhite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: .5em;
+    /* make this element invisible until we are ready for it */
+    display: none;      
+}
+.moveDown {
+    margin-top: 3em;
+}
+    
   
