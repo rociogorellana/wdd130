@@ -1,7 +1,7 @@
 /* if you are using any Google fonts change the font names below to your fonts. 
 Any spaces in your font name should be replaced with a +. 
 Fonts are separated by a | */
-@import url('https://fonts.google.com/share?selection.family=Cal+Sans,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Lato:wght@300;400;700&display=swap');
 :root {
   /* change the values below to your colors from your palette */
   --primary-color: #F7D1CD   ;
@@ -33,64 +33,57 @@ body {
   margin: 0 auto;
   padding: 4em;
   font-size: 18px;
+  font-family: var(--paragraph-font);
+  background-color: var(--accent2-color);
+  color: var(--paragraph-color-on-white);
   text-align: center;
 }
+
 img {
   display: block;
   margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
   color: var(--headline-color-on-white);
 }
+
 h2 {
   text-align: center;
 }
+
 hr {
   height: 3px;
   margin: 35px 0;
   background: var(--accent1-color);
 }
+
 header {
   padding: 1em;
   text-align: center;
-  color: var(--headline-color-on-color);
   background-color: var(--paragraph-background-color);
 }
-header > h1, header > h2 {
+
+header > h1,
+header > h2 {
   color: var(--headline-color-on-color);
+}
+
+main {
+  padding: 2em;
+  background-color: var(--accent2-color);
+}
+
+section {
+  margin-bottom: 2em;
 }
 
 p {
-  font-family: var(--paragraph-font);
   color: var(--paragraph-color-on-white);
   padding: 1em;
-}
-.colors {
-  width: 100%;
-  min-width: 350px;
-  margin: 30px auto;
-  text-align: center;
-}
-.colors th {
-  background-color: #999;
-}
-.colors td{
-  width: 25%;
-  height: 3em;
-}
-
-.primary {
-  background-color: var(--primary-color);
-}
-.secondary {
-  background-color: var(--secondary-color);
-}
-.accent1 {
-  background-color: var(--accent1-color);
-}
-.accent2{
-  background-color: var(--accent2-color);
 }
 
 p.colored {
@@ -100,56 +93,85 @@ p.colored {
 
 nav {
   background-color: var(--nav-background-color);
-  line-height: 3em;
-  text-align: center;
-  font-size: 1.2em;
-}
-nav  {
-  list-style-type: none;
   display: flex;
-
+  justify-content: center;
+  gap: 1em;
+  padding: 1em 0;
 }
+
 nav a {
-  padding:1em;
-  min-width: 120px;
-  text-decoration: none;
-  padding: 10px;
-
-}
-nav a:link, nav a:visited {
   color: var(--nav-link-color);
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
+
 nav a:hover {
   color: var(--nav-hover-link-color);
   background-color: var(--nav-hover-background-color);
 }
 
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.colors th {
+  background-color: #999;
+}
+
+.colors td {
+  width: 25%;
+  height: 3em;
+}
+
+.primary {
+  background-color: var(--primary-color);
+}
+
+.secondary {
+  background-color: var(--secondary-color);
+}
+
+.accent1 {
+  background-color: var(--accent1-color);
+}
+
+.accent2 {
+  background-color: var(--accent2-color);
+}
+
 .sitemap {
   display: grid;
   justify-content: center;
-
   grid-template-columns: repeat(6, 15%);
   grid-template-rows: 3em 1.5em 1.5em 3em;
-  grid-template-areas: ". . home home . ."
+  grid-template-areas:
+    ". . home home . ."
     ". . . top . ."
     ". left left right right ."
     "page2 page2 . . page3 page3";
 }
+
 .sitemap > div {
-
   text-align: center;
-
 }
+
 .sm-home {
   grid-area: home;
   background-color: #ccc;
   line-height: 3em;
 }
+
 .sm-page2 {
   grid-area: page2;
   background-color: #ccc;
   line-height: 3em;
 }
+
 .sm-page3 {
   grid-area: page3;
   background-color: #ccc;
@@ -171,4 +193,60 @@ nav a:hover {
   grid-area: right;
   border-top: 1px solid;
   border-right: 1px solid;
+}
+
+footer {
+  background-color: var(--paragraph-background-color);
+  color: var(--headline-color-on-color);
+  padding: 1.5em;
+  text-align: center;
+}
+
+footer a {
+  color: var(--nav-hover-link-color);
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: var(--accent1-color);
+}
+
+/* Optional Button and Form Styles */
+button,
+input[type="submit"] {
+  background-color: var(--accent1-color);
+  color: white;
+  border: none;
+  padding: 0.75em 1.5em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: var(--nav-hover-background-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  body {
+    padding: 2em 1em;
+  }
+
+  .colors td {
+    font-size: 0.8em;
+  }
+
+  .sitemap {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "home home"
+      "page2 page3";
+  }
 }
