@@ -1,0 +1,123 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  /*  palette */
+  --primary-color: #F7D1CD;
+  --secondary-color: #E8C2CA;
+  --accent1-color: #D1B3C4;
+  --accent2-color: white;
+
+  --heading-font: "IM Fell French Canon SC";
+  --paragraph-font: Lato, Helvetica, sans-serif;
+
+  --headline-color-on-white: #396E94;  
+  --headline-color-on-color: white; 
+  --paragraph-color-on-white: #396E94; 
+  --paragraph-color-on-color: white; 
+  --paragraph-background-color: #396E94;
+  --nav-link-color: #396E94;
+  --nav-background-color: #D4AC0D;
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: #396E94;
+}
+
+/*  General styles */
+body {
+  margin: 0;
+  font-family: var(--paragraph-font);
+  background-color: var(--accent2-color);
+  color: var(--paragraph-color-on-white);
+}
+
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+
+header {
+  background-color: var(--paragraph-background-color);
+  color: var(--headline-color-on-color);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1,
+header h2 {
+  margin: 0.5rem 0;
+  color: var(--headline-color-on-color);
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+nav a {
+  color: var(--nav-link-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+}
+
+main section {
+  background-color: var(--accent2-color);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+main section:nth-child(1) {
+  grid-column: 1 / -1;
+}
+
+main section:nth-child(2) {
+  grid-column: 1 / 7;
+}
+
+main section:nth-child(3) {
+  grid-column: 7 / -1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: var(--paragraph-background-color);
+  color: var(--headline-color-on-color);
+  text-align: center;
+  padding: 2rem;
+}
+
+footer a {
+  color: var(--headline-color-on-color);
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: var(--accent1-color);
+}
