@@ -1,13 +1,15 @@
+/*  Import your Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Lato:wght@300;400;700&display=swap');
 
+/*  Root palette & fonts */
 :root {
   --primary-color: #F7D1CD;
   --secondary-color: #E8C2CA;
   --accent1-color: #D1B3C4;
   --accent2-color: white;
 
-  --heading-font: 'Oswald', sans-serif;
-  --paragraph-font: Lato, Helvetica, sans-serif;
+  --heading-font: 'Oswald', Arial, Helvetica, sans-serif;
+  --paragraph-font: 'Lato', Verdana, Geneva, sans-serif;
 
   --headline-color-on-white: black;
   --headline-color-on-color: #FFFFFF;
@@ -21,29 +23,50 @@
   --nav-hover-background-color: black;
 }
 
+/*  Body reset & base font */
 body {
   background-color: #fcfbfb; 
   font-family: var(--paragraph-font);
+  font-size: 22px;
   color: var(--paragraph-color-on-white);
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
+h2 {
+  margin: 0;
+}
+
+/*  Container max-width and center */
 #content {
   max-width: 1600px;  
   margin: 0 auto;
   text-align: center;
 }
 
+/*  Header style */
 header {
   background-color: rgba(20,30,13, 0.7);
   color: var(--headline-color-on-color);
   font-family: var(--heading-font);
 }
 
+/*  Logo spacing */
+#logo_link {
+  padding-top: 5px;
+}
+
+.logo {
+  width: 80px;
+}
+
+/*  Nav links */
 nav a {
   text-align: center;
   color: var(--nav-link-color);
   text-decoration: none;
-  padding: 1em;
+  padding: 35px;
 }
 
 nav a:hover {
@@ -51,26 +74,82 @@ nav a:hover {
   color: var(--nav-hover-link-color);
 }
 
-.icon {
-  width: 80px;
-}
-
-.logo {
-  width: 80px;
-}
-
+/*  Hero image */
 #hero-img {
   width: 100%;
 }
 
+/* Headline: Home title */
+.home-title {
+  font-family: var(--heading-font);
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+/*  Buttons: Book & Join */
+.book, .join {
+  background-color: #d9c2a3;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 15px 30px;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+.book:hover, .join:hover {
+  background-color: #0a9396;
+  color: white;
+}
+
+/*  .msg headline and paragraph */
+.msg h2 {
+  font-family: var(--heading-font);
+}
+
+.msg {
+  background-color: #6f7364;
+  line-height: 1.5em;
+  padding: 35px;
+}
+
+.msg p {
+  font-family: var(--paragraph-font);
+  font-size: 0.8em;
+  padding-bottom: 15px;
+}
+
+/* Cards spacing */
+.rivers-card, .camping-card, .rapids-card {
+  margin: 200px 0;
+}
+
+/* Icons */
+.icon {
+  width: 80px;
+  padding-top: 10px;
+}
+
+/*  Card images */
+.card-img {
+  border: 10px solid #d9c2a3;
+}
+
+main section img {
+  box-sizing: border-box;
+}
+
+/*  Background */
 #background {
   height: 725px;
 }
 
+/*  Footer */
 footer {
   background-color: var(--paragraph-background-color);
   color: var(--headline-color-on-color);
-  padding: 1rem;
+  padding: 25px 50px;
+  margin-top: 200px;
   text-align: center;
 }
 
@@ -78,7 +157,7 @@ footer p {
   font-size: 1.2em;
 }
 
-footer p a {
+footer a {
   color: var(--headline-color-on-color);
   text-decoration: none;
 }
@@ -86,6 +165,11 @@ footer p a {
 footer p a:hover {
   text-decoration: underline;
 }
+
+footer .social img {
+  padding-top: 15px;
+}
+
 
 form {
   max-width: 500px;
@@ -123,6 +207,7 @@ button {
 button:hover {
   background-color: #0a9396;
 }
+
 
 #feedback {
   background-color: antiquewhite;
