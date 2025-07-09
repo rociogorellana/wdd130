@@ -121,3 +121,65 @@ footer a {
 footer a:hover {
   color: var(--accent1-color);
 }
+/* Profile Card Component */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  max-width: 300px;
+  margin: 0 auto 2rem auto; /* center and add space below */
+  text-align: center;
+  font-family: var(--paragraph-font);
+  background-color: var(--accent2-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.card h1 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+
+.title {
+  color: var(--paragraph-color-on-white);
+  font-size: 18px;
+}
+
+.card p {
+  margin: 8px 0;
+  color: var(--paragraph-color-on-white);
+}
+
+.card a {
+  text-decoration: none;
+  font-size: 22px;
+  color: var(--paragraph-color-on-white);
+  margin: 0 5px;
+}
+
+.card a:hover {
+  opacity: 0.7;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px;
+  color: var(--nav-hover-link-color);
+  background-color: var(--paragraph-background-color);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 0 0 8px 8px;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: var(--nav-background-color);
+  color: var(--nav-link-color);
+}
